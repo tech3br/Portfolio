@@ -1,27 +1,19 @@
-import testopt
-import time
-import pyui
+import pandas 
+import csv
+import os
 
-def onbutton(self):
-    print ("got a button")
+
+escrita = csv.writer(open("falas.txt", "wb"))
+
+c = ['Nome','teste']
+
+
+def DialogoInicial():
     
-def run():
-    opts = testopt.parseCommandLine(800, 600)
-    done = 1
-    frame = 0
-    t = time.time()
-    pyui.init(*opts)
-    w = pyui.widgets.Frame(50, 50, 400, 400, "clipme")
-    b = pyui.widgets.Button( "A button is here", onbutton)
-    w.addChild(b)
-    w.pack()
-
-    w.setBackImage("max.bmp")
-    pyui.run()
-
-    print ("done"
+    entrada = input("Seu nome: ")
     
+    nome = entrada
 
+    c.append(nome)
 
-if __name__ == '__main__':
-    run()
+DialogoInicial()
